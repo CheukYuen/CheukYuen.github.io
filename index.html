@@ -193,6 +193,83 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/20/Leetcode-Day10/" itemprop="url">
+                Leetcode-Day10
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-20T22:42:35-07:00" content="2015-09-20">
+            2015-09-20
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_10">从零开始Leetcode – Day 10</h1><p>##Binary Tree Level Order Traversal<br>不是很熟悉 curNum, lastNum. 理解得不够透彻。早点休息， 明天再努力。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * @param &#123;TreeNode&#125; root</span><br><span class="line"> * @return &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line">var levelOrder = function(root) &#123;</span><br><span class="line">      var <span class="built_in">queue</span> = [];</span><br><span class="line">      var <span class="built_in">list</span> = [];</span><br><span class="line">      var res = [];</span><br><span class="line">      <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">          <span class="keyword">return</span> res;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">queue</span>.push(root);</span><br><span class="line">      curNum = <span class="number">0</span>;</span><br><span class="line">      lastNum =<span class="number">1</span>;</span><br><span class="line">      <span class="keyword">while</span>(<span class="built_in">queue</span>.length)&#123;</span><br><span class="line">          var cur = <span class="built_in">queue</span>.shift();</span><br><span class="line">          <span class="built_in">list</span>.push(cur.val);</span><br><span class="line">          lastNum--;</span><br><span class="line">          <span class="keyword">if</span>(cur.left)&#123;</span><br><span class="line">              curNum++;</span><br><span class="line">              <span class="built_in">queue</span>.push(cur.left);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span>(cur.right)&#123;</span><br><span class="line">              curNum++;</span><br><span class="line">              <span class="built_in">queue</span>.push(cur.right);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span>(lastNum ===<span class="number">0</span>)&#123;</span><br><span class="line">              lastNum = curNum;</span><br><span class="line">              curNum = <span class="number">0</span>;</span><br><span class="line">              res.push(<span class="built_in">list</span>);</span><br><span class="line">              <span class="built_in">list</span> = [];</span><br><span class="line">          &#125;</span><br><span class="line">          </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/19/hello-world/" itemprop="url">
                 Hello World
               </a>
@@ -890,85 +967,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/29/Leetcode-Day1/" itemprop="url">
-                leetcode Day1
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-08-29T22:58:11-07:00" content="2015-08-29">
-            2015-08-29
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">从零开始Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_1">从零开始Leetcode – Day 1</h1><h2 id="Symmetric_Tree">Symmetric Tree</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isSymmetric = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> helper(root.left , root.right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">helper</span><span class="params">(p , q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>( p === <span class="literal">null</span> &amp;&amp; q ===<span class="literal">null</span>)&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;     </span><br><span class="line">    <span class="keyword">if</span>( p === <span class="literal">null</span> || q ===<span class="literal">null</span>)&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>( p.val != q.val)&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> helper(p.left, q.right) &amp;&amp; helper(p.right , q.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Same_Tree">Same Tree</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isSameTree = <span class="function"><span class="keyword">function</span><span class="params">(p, q)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( p === <span class="literal">null</span> &amp;&amp; q === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>( p !== <span class="literal">null</span> || q !== <span class="literal">null</span> )&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>( p.val != q.val)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSameTree( p.left , q.left) &amp;&amp; isSameTree( p.right, q.right);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Maximum_Depth_of_Binary_Tree">Maximum Depth of Binary Tree</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(maxDepth(root.left) , maxDepth(root.right)) + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Balanced_Binary_Tree">Balanced Binary Tree</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> leftDepth = maxDepth(root.left);</span><br><span class="line">    <span class="keyword">var</span> rightDepth = maxDepth(root.right);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(leftDepth - rightDepth) &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxDepth = <span class="function"><span class="keyword">function</span> (<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(maxDepth(root.left) ,maxDepth(root.right)) + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1007,7 +1005,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
