@@ -193,6 +193,90 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/30/Leetcode-Day2/" itemprop="url">
+                leetcode Day2
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-30T22:45:19-07:00" content="2015-08-30">
+            2015-08-30
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_2">从零开始Leetcode – Day 2</h1><h2 id="Lowest_Common_Ancestor_of_a_Binary_Search_Tree">Lowest Common Ancestor of a Binary Search Tree</h2><p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var lowestCommonAncestor = <span class="keyword">function</span>(root, p, q) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root.<span class="keyword">val</span> &lt; p.<span class="keyword">val</span> &amp;&amp; root.<span class="keyword">val</span> &lt; q.<span class="keyword">val</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> lowestCommonAncestor(root.right , p ,q);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(root.<span class="keyword">val</span> &gt; p.<span class="keyword">val</span> &amp;&amp; root.<span class="keyword">val</span> &gt; q.<span class="keyword">val</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> lowestCommonAncestor(root.left , p ,q);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Invert_Binary_Tree">Invert Binary Tree</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> invertTree = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> tempLeft = root.left;</span><br><span class="line">    <span class="keyword">var</span> tempRight = root.right;</span><br><span class="line">    root.left = invertTree(tempRight);</span><br><span class="line">    root.right = invertTree(tempLeft);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Minimum_Depth_of_Binary_Tree">Minimum Depth of Binary Tree</h2><p>Given a binary tree, find its minimum depth.</p>
+<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> minDepth(root.right) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> minDepth(root.left) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.min(minDepth(root.left), minDepth(root.right)) + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Path_Sum">Path Sum</h2><p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> hasPathSum</span> = function(root, sum) &#123;</span><br><span class="line">    <span class="keyword">if</span>( root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="literal">null</span> &amp;&amp; root.right === <span class="literal">null</span> &amp;&amp; root.<span class="keyword">val</span> == sum)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hasPathSum(root.left , sum - root.<span class="keyword">val</span>) || hasPathSum(root.right, sum - root.<span class="keyword">val</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/08/29/Leetcode-Day1/" itemprop="url">
                 leetcode Day1
               </a>
@@ -986,142 +1070,11 @@ def helper(self, root, level, <span class="literal">result</span>):
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/10/markdown/" itemprop="url">
-                Markdown
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-03-10T01:04:29-07:00" content="2015-03-10">
-            2015-03-10
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Hexo/" itemprop="url" rel="index">
-                  <span itemprop="name">Hexo</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>#Markdown–从入门到精通</p>
-<p>#一级标题</p>
-<p>##二级标题</p>
-<p>###三级标题</p>
-<p>####四级标题</p>
-<p>#####五级标题</p>
-<p>####无序列</p>
-<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-</ul>
-<p>####有序列</p>
-<ol>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-</ol>
-<p>####引用</p>
-<blockquote>
-<p>这里是引用</p>
-</blockquote>
-<p>####插入图片</p>
-<p><a href="http://baidu.com" target="_blank" rel="external">Baidu</a></p>
-<p>####插入图片</p>
-<!--![Mou icon](http://www.johnmoranphoto.com/images/sky/img_sky_001.jpg)-->
-<p>####粗体</p>
-<p><em>测试斜体</em></p>
-<p><strong>测试粗体</strong></p>
-<p>####表格<br>| Tables        | Are           | Cool  |<br>| ————- |:————-:| —–:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |</p>
-<p>####代码</p>
-<p><code>var a = 1;</code></p>
-<h4 id="Inline_code_and_Block_code">Inline code and Block code</h4><p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
-<pre><code>Indent <span class="keyword">each</span> <span class="built_in">line</span> <span class="keyword">by</span> <span class="keyword">at</span> least <span class="number">1</span> <span class="constant">tab</span>, <span class="operator">or</span> <span class="number">4</span> spaces.
-var Mou = exactlyTheAppIwant; 
-</code></pre><p>test2</p>
-<pre><code><span class="comment">/**
- * nth element in the fibonacci series.
- * <span class="doctag">@param</span> n &gt;= 0
- * <span class="doctag">@return</span> the nth element, &gt;= 0.
- */</span>
-<span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n)</span> </span>{
-    <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;
-    <span class="keyword">var</span> tmp;
-    <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) {
-        tmp = a;
-        a += b;
-       b = tmp;
-    }
-    <span class="keyword">return</span> a;
-}
-
-document.write(fib(<span class="number">10</span>));  
-</code></pre><p>####分割线</p>
-<hr>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
   </nav>
 
  </div>
@@ -1155,7 +1108,7 @@ document.write(fib(<span class="number">10</span>));
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
