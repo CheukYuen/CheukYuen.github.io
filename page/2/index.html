@@ -193,6 +193,85 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/31/Leetcode-Day3/" itemprop="url">
+                leetcode Day3
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-31T23:05:08-07:00" content="2015-08-31">
+            2015-08-31
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_2">从零开始Leetcode – Day 2</h1><h2 id="Binary_Tree_Paths">Binary Tree Paths</h2><p>这题卡了半天。 这个[“1-&gt;2-&gt;5”, “1-&gt;3”] 到底要怎么实现。 今天挂了。 </p>
+<p>◢▆▅▄▃崩╰(〒皿〒)╯潰▃▄▅▇◣ 明天还要早起， GG。</p>
+<p><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-paths/</a></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/08/30/Leetcode-Day2/" itemprop="url">
                 leetcode Day2
               </a>
@@ -975,101 +1054,6 @@ def helper(self, root, level, <span class="literal">result</span>):
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/14/Symmetric-Tree/" itemprop="url">
-                Symmetric-Tree
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-03-14T11:07:48-07:00" content="2015-03-14">
-            2015-03-14
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>####Symmetric Tree</p>
-<p>原题地址：<a href="https://oj.leetcode.com/problems/symmetric-tree/" target="_blank" rel="external">https://oj.leetcode.com/problems/symmetric-tree/</a></p>
-<p>题意：判断二叉树是否为对称的。</p>
-<p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>
-<p>解题思路：这题也不难。需要用一个help函数，当然也是递归的。当存在左右子树时，判断左右子树的根节点值是否相等，如果想等继续递归判断左子树根的右子树根节点和右子树根的左子树根节点以及左子树根的左子树根节点和右子树根的右子树根节点的值是否相等。然后一直递归判断下去就可以了。</p>
-<p>class Solution:</p>
-<pre><code><span class="comment"># @param root, a tree node</span>
-<span class="comment"># @return a boolean</span>
-<span class="function"><span class="keyword">def</span> <span class="title">isSymmetric</span><span class="params">(self, root)</span>:</span>
-    <span class="keyword">if</span> root:
-        <span class="keyword">return</span> self.helper(root.left, root.right) 
-    <span class="keyword">return</span> <span class="keyword">True</span>    
-
-<span class="function"><span class="keyword">def</span> <span class="title">helper</span><span class="params">(self, p, q)</span>:</span>
-    <span class="keyword">if</span> p == q == <span class="keyword">None</span>:
-        <span class="keyword">return</span> <span class="keyword">True</span>
-    <span class="keyword">if</span> p <span class="keyword">and</span> q <span class="keyword">and</span>  q.val== p.val:
-        <span class="keyword">return</span> self.helper(p.left, q.right) <span class="keyword">and</span> self.helper(p.right, q.left)
-    <span class="keyword">return</span> <span class="keyword">False</span>  
-</code></pre></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1108,7 +1092,7 @@ def helper(self, root, level, <span class="literal">result</span>):
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
