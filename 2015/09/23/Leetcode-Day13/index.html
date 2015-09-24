@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="tree," />
+  <meta name="keywords" content="Hexo,next" />
 
 
 
@@ -37,19 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="从零开始Leetcode – Day 2Lowest Common Ancestor of a Binary Search TreeGiven a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
-1234567891011var lowestCommonAn">
+<meta name="description" content="从零开始Leetcode – Day 13Convert Sorted Array to Binary Search Treehttps://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/http://blog.csdn.net/linhuanmars/article/details/23904883
+前2天得太难">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode Day2">
-<meta property="og:url" content="http://yoursite.com/2015/08/30/Leetcode-Day2/index.html">
+<meta property="og:title" content="Leetcode-Day13">
+<meta property="og:url" content="http://yoursite.com/2015/09/23/Leetcode-Day13/index.html">
 <meta property="og:site_name" content="Leon Lin's Blog">
-<meta property="og:description" content="从零开始Leetcode – Day 2Lowest Common Ancestor of a Binary Search TreeGiven a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
-1234567891011var lowestCommonAn">
-<meta property="og:updated_time" content="2015-08-31T05:56:47.000Z">
+<meta property="og:description" content="从零开始Leetcode – Day 13Convert Sorted Array to Binary Search Treehttps://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/http://blog.csdn.net/linhuanmars/article/details/23904883
+前2天得太难">
+<meta property="og:updated_time" content="2015-09-24T06:39:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode Day2">
-<meta name="twitter:description" content="从零开始Leetcode – Day 2Lowest Common Ancestor of a Binary Search TreeGiven a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
-1234567891011var lowestCommonAn">
+<meta name="twitter:title" content="Leetcode-Day13">
+<meta name="twitter:description" content="从零开始Leetcode – Day 13Convert Sorted Array to Binary Search Treehttps://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/http://blog.csdn.net/linhuanmars/article/details/23904883
+前2天得太难">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +59,7 @@
   };
 </script>
 
-  <title> leetcode Day2 | Leon Lin's Blog </title>
+  <title> Leetcode-Day13 | Leon Lin's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -195,7 +195,7 @@
           
           
             
-              leetcode Day2
+              Leetcode-Day13
             
           
         </h1>
@@ -204,8 +204,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-08-30T22:45:19-07:00" content="2015-08-30">
-            2015-08-30
+          <time itemprop="dateCreated" datetime="2015-09-23T23:37:05-07:00" content="2015-09-23">
+            2015-09-23
           </time>
         </span>
 
@@ -238,38 +238,24 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_2">从零开始Leetcode – Day 2</h1><h2 id="Lowest_Common_Ancestor_of_a_Binary_Search_Tree">Lowest Common Ancestor of a Binary Search Tree</h2><p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
-<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var lowestCommonAncestor = <span class="keyword">function</span>(root, p, q) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root.<span class="keyword">val</span> &lt; p.<span class="keyword">val</span> &amp;&amp; root.<span class="keyword">val</span> &lt; q.<span class="keyword">val</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> lowestCommonAncestor(root.right , p ,q);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(root.<span class="keyword">val</span> &gt; p.<span class="keyword">val</span> &amp;&amp; root.<span class="keyword">val</span> &gt; q.<span class="keyword">val</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> lowestCommonAncestor(root.left , p ,q);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Invert_Binary_Tree">Invert Binary Tree</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> invertTree = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> tempLeft = root.left;</span><br><span class="line">    <span class="keyword">var</span> tempRight = root.right;</span><br><span class="line">    root.left = invertTree(tempRight);</span><br><span class="line">    root.right = invertTree(tempLeft);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Minimum_Depth_of_Binary_Tree">Minimum Depth of Binary Tree</h2><p>Given a binary tree, find its minimum depth.</p>
-<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> minDepth(root.right) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> minDepth(root.left) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.min(minDepth(root.left), minDepth(root.right)) + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Path_Sum">Path Sum</h2><p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> hasPathSum</span> = function(root, sum) &#123;</span><br><span class="line">    <span class="keyword">if</span>( root === <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="literal">null</span> &amp;&amp; root.right === <span class="literal">null</span> &amp;&amp; root.<span class="keyword">val</span> == sum)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hasPathSum(root.left , sum - root.<span class="keyword">val</span>) || hasPathSum(root.right, sum - root.<span class="keyword">val</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</span>
+        <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_13">从零开始Leetcode – Day 13</h1><h2 id="Convert_Sorted_Array_to_Binary_Search_Tree">Convert Sorted Array to Binary Search Tree</h2><p><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="external">https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/</a><br><a href="http://blog.csdn.net/linhuanmars/article/details/23904883" target="_blank" rel="external">http://blog.csdn.net/linhuanmars/article/details/23904883</a></p>
+<p>前2天得太难了，跳过。以后碰到太难的直接跳过。 明天继续Angular之旅。快要看完了, 加油~~！！</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;number[]&#125; nums</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedArrayToBST = <span class="function"><span class="keyword">function</span><span class="params">(nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums === <span class="keyword">null</span> || nums.length ===<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> helper(nums, <span class="number">0</span>, nums.length -<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(nums, l ,r)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(l &gt; r)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> m = Math.round((l+r)/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(nums[m]);</span><br><span class="line">        root.left = helper(nums, l, m-<span class="number">1</span>);</span><br><span class="line">        root.right = helper(nums, m+<span class="number">1</span>, r);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/tree/" rel="tag">#tree</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/31/Leetcode-Day3/" rel="prev">leetcode Day3</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/29/Leetcode-Day1/" rel="next">leetcode Day1</a>
+              <a href="/2015/09/22/Leetcode-Day12/" rel="next">Leetcode-Day12</a>
             
           </div>
         </div>
@@ -373,7 +359,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_2"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lowest_Common_Ancestor_of_a_Binary_Search_Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Lowest Common Ancestor of a Binary Search Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invert_Binary_Tree"><span class="nav-number">1.2.</span> <span class="nav-text">Invert Binary Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimum_Depth_of_Binary_Tree"><span class="nav-number">1.3.</span> <span class="nav-text">Minimum Depth of Binary Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Path_Sum"><span class="nav-number">1.4.</span> <span class="nav-text">Path Sum</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_13"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 13</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Convert_Sorted_Array_to_Binary_Search_Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Convert Sorted Array to Binary Search Tree</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

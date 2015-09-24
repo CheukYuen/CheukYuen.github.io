@@ -193,6 +193,84 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/23/Leetcode-Day13/" itemprop="url">
+                Leetcode-Day13
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-23T23:37:05-07:00" content="2015-09-23">
+            2015-09-23
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_13">从零开始Leetcode – Day 13</h1><h2 id="Convert_Sorted_Array_to_Binary_Search_Tree">Convert Sorted Array to Binary Search Tree</h2><p><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="external">https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/</a><br><a href="http://blog.csdn.net/linhuanmars/article/details/23904883" target="_blank" rel="external">http://blog.csdn.net/linhuanmars/article/details/23904883</a></p>
+<p>前2天得太难了，跳过。以后碰到太难的直接跳过。 明天继续Angular之旅。快要看完了, 加油~~！！</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;number[]&#125; nums</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedArrayToBST = <span class="function"><span class="keyword">function</span><span class="params">(nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums === <span class="keyword">null</span> || nums.length ===<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> helper(nums, <span class="number">0</span>, nums.length -<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(nums, l ,r)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(l &gt; r)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> m = Math.round((l+r)/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(nums[m]);</span><br><span class="line">        root.left = helper(nums, l, m-<span class="number">1</span>);</span><br><span class="line">        root.right = helper(nums, m+<span class="number">1</span>, r);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/22/Leetcode-Day12/" itemprop="url">
                 Leetcode-Day12
               </a>
@@ -877,89 +955,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/01/Leetcode-Day4/" itemprop="url">
-                leetcode Day4
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-09-01T22:55:58-07:00" content="2015-09-01">
-            2015-09-01
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">从零开始Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_4">从零开始Leetcode – Day 4</h1><p>LeetCode总结 – 树的性质篇<br><a href="http://blog.csdn.net/linhuanmars/article/details/39024195" target="_blank" rel="external">http://blog.csdn.net/linhuanmars/article/details/39024195</a><br>这个博客分析得不错。</p>
-<p>总结一下今天： </p>
-<ol>
-<li>前一天晚上要休息好， 才有可能下班后再刷题.</li>
-<li>效率要提高。 不要花太多时间去摸索， 想不出来直接网上看代码， 转换成javascript.</li>
-</ol>
-<h2 id="Binary_Tree_Paths">Binary Tree Paths</h2><p>Given a binary tree, return all root-to-leaf paths.<br><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-paths/</a></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> binaryTreePaths</span> = function(root) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable"><span class="keyword">var</span> str</span> = <span class="string">""</span>;</span><br><span class="line">    <span class="variable"><span class="keyword">var</span> results</span> = [];</span><br><span class="line"></span><br><span class="line">    helper(str, results, root);</span><br><span class="line">    <span class="keyword">return</span> results;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable"><span class="keyword">var</span> helper</span> = function(str, results, node) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!node) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> leftStr</span> = str + node.<span class="keyword">val</span> + <span class="string">"-&gt;"</span>;</span><br><span class="line">        helper(leftStr, results, node.left);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> rightStr</span> = str + node.<span class="keyword">val</span> + <span class="string">"-&gt;"</span>;</span><br><span class="line">        helper(rightStr, results, node.right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!node.left &amp;&amp; !node.right) &#123;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> path</span> = str + node.<span class="keyword">val</span>;</span><br><span class="line">        results.push(path);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -998,7 +993,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
