@@ -193,6 +193,104 @@
           
           
             
+              <a class="post-title-link" href="/2015/03/16/Balanced-Binary-Tree/" itemprop="url">
+                Balanced-Binary-Tree
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-03-16T23:13:41-07:00" content="2015-03-16">
+            2015-03-16
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>##Balanced Binary Tree<br>Given a binary tree, determine if it is height-balanced.</p>
+<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
+<p>class Solution:</p>
+<pre><code><span class="comment"># @param root, a tree node</span>
+<span class="comment"># @return a boolean</span>
+
+        <span class="comment"># every node max height</span>
+<span class="function"><span class="keyword">def</span> <span class="title">height</span><span class="params">(self, root)</span>:</span>
+    <span class="keyword">if</span> <span class="keyword">not</span> root:
+        <span class="keyword">return</span> <span class="number">0</span>
+    <span class="keyword">return</span> max(self.height(root.left), self.height(root.right)) + <span class="number">1</span>
+
+<span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span><span class="params">(self, root)</span>:</span>
+    <span class="comment"># root is empty, true</span>
+    <span class="keyword">if</span> <span class="keyword">not</span> root:
+        <span class="keyword">return</span> <span class="keyword">True</span>
+    <span class="comment"># every two children node height less than 1 </span>
+    <span class="keyword">if</span> abs(self.height(root.left) - self.height(root.right)) &lt;= <span class="number">1</span>:
+        <span class="keyword">return</span> self.isBalanced(root.left) <span class="keyword">and</span> self.isBalanced(root.right)
+    <span class="comment"># not balance return False</span>
+    <span class="keyword">else</span>:
+        <span class="keyword">return</span> <span class="keyword">False</span>
+</code></pre></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/03/15/Same-Tree/" itemprop="url">
                 Same-Tree
               </a>
@@ -535,7 +633,7 @@ document.write(fib(<span class="number">10</span>));
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

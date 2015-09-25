@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/09/22/Leetcode-Day12/index.html">
 <meta property="og:site_name" content="Leon Lin's Blog">
 <meta property="og:description" content="从零开始Leetcode – Day 12Construct Binary Tree from Inorder and Postorder Traversalhttps://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/递归时有点复杂， 明天把把11，12的一起干了。 明天开始进入a">
-<meta property="og:updated_time" content="2015-09-23T05:51:08.000Z">
+<meta property="og:updated_time" content="2015-09-25T06:27:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode-Day12">
 <meta name="twitter:description" content="从零开始Leetcode – Day 12Construct Binary Tree from Inorder and Postorder Traversalhttps://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/递归时有点复杂， 明天把把11，12的一起干了。 明天开始进入a">
@@ -236,6 +236,7 @@
 
       
         <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_12">从零开始Leetcode – Day 12</h1><h2 id="Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal">Construct Binary Tree from Inorder and Postorder Traversal</h2><p><a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/" target="_blank" rel="external">https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/</a><br>递归时有点复杂， 明天把把11，12的一起干了。 明天开始进入angular.</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buildTree = <span class="function"><span class="keyword">function</span><span class="params">(inorder, postorder)</span> </span>&#123;</span><br><span class="line">    node_nums = inorder.length;</span><br><span class="line">    post_i = node_nums - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> build_tree(<span class="number">0</span>, node_nums-<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">build_tree</span><span class="params">(start, end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start &lt;= end) &#123;</span><br><span class="line">            <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(postorder[post_i]);</span><br><span class="line">            <span class="comment">// var root_index = postToIn.get(postorder[post_i])</span></span><br><span class="line">            <span class="keyword">var</span> root_index = inorder.indexOf(postorder[post_i])</span><br><span class="line">            post_i--;</span><br><span class="line">            root.right = build_tree(root_index+<span class="number">1</span>, end);</span><br><span class="line">            root.left = build_tree(start, root_index-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -315,7 +316,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

@@ -193,6 +193,83 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/24/Leetcode-Day14/" itemprop="url">
+                Leetcode-Day14
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-24T23:11:13-07:00" content="2015-09-24">
+            2015-09-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_14">从零开始Leetcode – Day 14</h1><h2 id="Convert_Sorted_List_to_Binary_Search_Tree">Convert Sorted List to Binary Search Tree</h2><p><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * function ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.next = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;ListNode&#125; head</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedListToBST = <span class="function"><span class="keyword">function</span><span class="params">(head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> cur = head;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cur !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(head);</span><br><span class="line">    <span class="keyword">return</span> helper(<span class="keyword">list</span>, <span class="number">0</span>, count-<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(list, l, r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> m = Math.round((l+r)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">var</span> left = <span class="keyword">new</span> TreeNode();</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/23/Leetcode-Day13/" itemprop="url">
                 Leetcode-Day13
               </a>
@@ -318,6 +395,7 @@
       
         
           <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_12">从零开始Leetcode – Day 12</h1><h2 id="Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal">Construct Binary Tree from Inorder and Postorder Traversal</h2><p><a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/" target="_blank" rel="external">https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/</a><br>递归时有点复杂， 明天把把11，12的一起干了。 明天开始进入angular.</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buildTree = <span class="function"><span class="keyword">function</span><span class="params">(inorder, postorder)</span> </span>&#123;</span><br><span class="line">    node_nums = inorder.length;</span><br><span class="line">    post_i = node_nums - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> build_tree(<span class="number">0</span>, node_nums-<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">build_tree</span><span class="params">(start, end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start &lt;= end) &#123;</span><br><span class="line">            <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(postorder[post_i]);</span><br><span class="line">            <span class="comment">// var root_index = postToIn.get(postorder[post_i])</span></span><br><span class="line">            <span class="keyword">var</span> root_index = inorder.indexOf(postorder[post_i])</span><br><span class="line">            post_i--;</span><br><span class="line">            root.right = build_tree(root_index+<span class="number">1</span>, end);</span><br><span class="line">            root.left = build_tree(start, root_index-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </span>
         
       
@@ -877,84 +955,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/05/Leetcode-Day5/" itemprop="url">
-                leetcode-Day8
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-09-05T23:11:50-07:00" content="2015-09-05">
-            2015-09-05
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">从零开始Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_5">从零开始Leetcode – Day 5</h1><p>5，6，7被吞掉了。<br>不会广度优先搜索， Binary Tree Level Order Traversal 这题不会做。<br><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-level-order-traversal/</a><br>明天加油。</p>
-<h2 id="Binary_Tree_Level_Order_Traversal">Binary Tree Level Order Traversal</h2><p><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-level-order-traversal/</a><br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> levelOrder</span> = function(root) &#123;</span><br><span class="line">           <span class="variable"><span class="keyword">var</span> res</span> = [];</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> queue</span> = [];</span><br><span class="line">        queue.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="variable"><span class="keyword">var</span> curNum</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> lastNum</span> = <span class="number">1</span>;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> list</span> = [];</span><br><span class="line">        <span class="keyword">while</span>(queue.length)&#123;</span><br><span class="line">        </span><br><span class="line">            <span class="variable"><span class="keyword">var</span> cur</span> = queue.shift();</span><br><span class="line">            lastNum --;</span><br><span class="line">            list.push(cur.<span class="keyword">val</span>);</span><br><span class="line">            <span class="keyword">if</span>(cur.left !== <span class="literal">null</span>)&#123;</span><br><span class="line">                queue.push(cur.left);</span><br><span class="line">                curNum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cur.right !== <span class="literal">null</span>)&#123;</span><br><span class="line">                queue.push(cur.right);</span><br><span class="line">                curNum ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lastNum === <span class="number">0</span>)&#123;</span><br><span class="line">                lastNum = curNum;</span><br><span class="line">                curNum = <span class="number">0</span>;</span><br><span class="line">                res.push(list);</span><br><span class="line">                list = [];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -993,7 +993,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

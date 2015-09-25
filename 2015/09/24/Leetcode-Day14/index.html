@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="tree," />
+  <meta name="keywords" content="Hexo,next" />
 
 
 
@@ -37,22 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="进入medium 的tree了， 这个有bug， 明天继续 
-从零开始Leetcode – Day 6Path Sum IIhttps://leetcode.com/problems/path-sum-ii/要记得每次递归过后，要把上一次的pop()出来。
-12345678910111213141516171819202122232425262728293031323334353637/** *">
+<meta name="description" content="从零开始Leetcode – Day 14Convert Sorted List to Binary Search Treehttps://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
+12345678910111213141516171819202122232425262728293031323334353637">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-Day9">
-<meta property="og:url" content="http://yoursite.com/2015/09/06/Leetcode-Day6/index.html">
+<meta property="og:title" content="Leetcode-Day14">
+<meta property="og:url" content="http://yoursite.com/2015/09/24/Leetcode-Day14/index.html">
 <meta property="og:site_name" content="Leon Lin's Blog">
-<meta property="og:description" content="进入medium 的tree了， 这个有bug， 明天继续 
-从零开始Leetcode – Day 6Path Sum IIhttps://leetcode.com/problems/path-sum-ii/要记得每次递归过后，要把上一次的pop()出来。
-12345678910111213141516171819202122232425262728293031323334353637/** *">
-<meta property="og:updated_time" content="2015-09-20T06:43:52.000Z">
+<meta property="og:description" content="从零开始Leetcode – Day 14Convert Sorted List to Binary Search Treehttps://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
+12345678910111213141516171819202122232425262728293031323334353637">
+<meta property="og:updated_time" content="2015-09-25T06:26:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-Day9">
-<meta name="twitter:description" content="进入medium 的tree了， 这个有bug， 明天继续 
-从零开始Leetcode – Day 6Path Sum IIhttps://leetcode.com/problems/path-sum-ii/要记得每次递归过后，要把上一次的pop()出来。
-12345678910111213141516171819202122232425262728293031323334353637/** *">
+<meta name="twitter:title" content="Leetcode-Day14">
+<meta name="twitter:description" content="从零开始Leetcode – Day 14Convert Sorted List to Binary Search Treehttps://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
+12345678910111213141516171819202122232425262728293031323334353637">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -62,7 +59,7 @@
   };
 </script>
 
-  <title> leetcode-Day9 | Leon Lin's Blog </title>
+  <title> Leetcode-Day14 | Leon Lin's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -198,7 +195,7 @@
           
           
             
-              leetcode-Day9
+              Leetcode-Day14
             
           
         </h1>
@@ -207,8 +204,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-09-06T23:51:34-07:00" content="2015-09-06">
-            2015-09-06
+          <time itemprop="dateCreated" datetime="2015-09-24T23:11:13-07:00" content="2015-09-24">
+            2015-09-24
           </time>
         </span>
 
@@ -241,33 +238,23 @@
       
 
       
-        <span itemprop="articleBody"><p>进入medium 的tree了， 这个有bug， 明天继续 </p>
-<h1 id="从零开始Leetcode_–_Day_6">从零开始Leetcode – Day 6</h1><h2 id="Path_Sum_II">Path Sum II</h2><p><a href="https://leetcode.com/problems/path-sum-ii/" target="_blank" rel="external">https://leetcode.com/problems/path-sum-ii/</a><br>要记得每次递归过后，要把上一次的pop()出来。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@param</span> &#123;number&#125; sum</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> pathSum = <span class="function"><span class="keyword">function</span><span class="params">(root, sum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(root.val);</span><br><span class="line">    helper(root, sum- root.val, <span class="keyword">list</span>, res);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(root, sum, list, res)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="keyword">null</span> &amp;&amp; root.right === <span class="keyword">null</span> &amp;&amp; sum === <span class="number">0</span>)&#123;</span><br><span class="line">        res.push(<span class="keyword">list</span>.slice());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">list</span>.push(root.left.val);</span><br><span class="line">        helper(root.left, sum - root.left.val, <span class="keyword">list</span>, res);</span><br><span class="line">        <span class="keyword">list</span>.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">list</span>.push(root.right.val);</span><br><span class="line">        helper(root.right, sum - root.right.val, <span class="keyword">list</span>, res);</span><br><span class="line">        <span class="keyword">list</span>.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</span>
+        <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_14">从零开始Leetcode – Day 14</h1><h2 id="Convert_Sorted_List_to_Binary_Search_Tree">Convert Sorted List to Binary Search Tree</h2><p><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * function ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.next = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;ListNode&#125; head</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedListToBST = <span class="function"><span class="keyword">function</span><span class="params">(head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> cur = head;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cur !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(head);</span><br><span class="line">    <span class="keyword">return</span> helper(<span class="keyword">list</span>, <span class="number">0</span>, count-<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(list, l, r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> m = Math.round((l+r)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">var</span> left = <span class="keyword">new</span> TreeNode();</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/tree/" rel="tag">#tree</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/17/Leetcode-Day7/" rel="prev">leetcode-Day10</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/05/Leetcode-Day5/" rel="next">leetcode-Day8</a>
+              <a href="/2015/09/23/Leetcode-Day13/" rel="next">Leetcode-Day13</a>
             
           </div>
         </div>
@@ -371,7 +358,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_6"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Path_Sum_II"><span class="nav-number">1.1.</span> <span class="nav-text">Path Sum II</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_14"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 14</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Convert_Sorted_List_to_Binary_Search_Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Convert Sorted List to Binary Search Tree</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

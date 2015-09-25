@@ -193,6 +193,84 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/05/Leetcode-Day5/" itemprop="url">
+                leetcode-Day8
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-05T23:11:50-07:00" content="2015-09-05">
+            2015-09-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_5">从零开始Leetcode – Day 5</h1><p>5，6，7被吞掉了。<br>不会广度优先搜索， Binary Tree Level Order Traversal 这题不会做。<br><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-level-order-traversal/</a><br>明天加油。</p>
+<h2 id="Binary_Tree_Level_Order_Traversal">Binary Tree Level Order Traversal</h2><p><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-level-order-traversal/</a><br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> levelOrder</span> = function(root) &#123;</span><br><span class="line">           <span class="variable"><span class="keyword">var</span> res</span> = [];</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> queue</span> = [];</span><br><span class="line">        queue.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="variable"><span class="keyword">var</span> curNum</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> lastNum</span> = <span class="number">1</span>;</span><br><span class="line">        <span class="variable"><span class="keyword">var</span> list</span> = [];</span><br><span class="line">        <span class="keyword">while</span>(queue.length)&#123;</span><br><span class="line">        </span><br><span class="line">            <span class="variable"><span class="keyword">var</span> cur</span> = queue.shift();</span><br><span class="line">            lastNum --;</span><br><span class="line">            list.push(cur.<span class="keyword">val</span>);</span><br><span class="line">            <span class="keyword">if</span>(cur.left !== <span class="literal">null</span>)&#123;</span><br><span class="line">                queue.push(cur.left);</span><br><span class="line">                curNum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cur.right !== <span class="literal">null</span>)&#123;</span><br><span class="line">                queue.push(cur.right);</span><br><span class="line">                curNum ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lastNum === <span class="number">0</span>)&#123;</span><br><span class="line">                lastNum = curNum;</span><br><span class="line">                curNum = <span class="number">0</span>;</span><br><span class="line">                res.push(list);</span><br><span class="line">                list = [];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/01/Leetcode-Day4/" itemprop="url">
                 leetcode Day4
               </a>
@@ -950,104 +1028,6 @@ def helper(self, root, level, <span class="literal">result</span>):
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/16/Balanced-Binary-Tree/" itemprop="url">
-                Balanced-Binary-Tree
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-03-16T23:13:41-07:00" content="2015-03-16">
-            2015-03-16
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>##Balanced Binary Tree<br>Given a binary tree, determine if it is height-balanced.</p>
-<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
-<p>class Solution:</p>
-<pre><code><span class="comment"># @param root, a tree node</span>
-<span class="comment"># @return a boolean</span>
-
-        <span class="comment"># every node max height</span>
-<span class="function"><span class="keyword">def</span> <span class="title">height</span><span class="params">(self, root)</span>:</span>
-    <span class="keyword">if</span> <span class="keyword">not</span> root:
-        <span class="keyword">return</span> <span class="number">0</span>
-    <span class="keyword">return</span> max(self.height(root.left), self.height(root.right)) + <span class="number">1</span>
-
-<span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span><span class="params">(self, root)</span>:</span>
-    <span class="comment"># root is empty, true</span>
-    <span class="keyword">if</span> <span class="keyword">not</span> root:
-        <span class="keyword">return</span> <span class="keyword">True</span>
-    <span class="comment"># every two children node height less than 1 </span>
-    <span class="keyword">if</span> abs(self.height(root.left) - self.height(root.right)) &lt;= <span class="number">1</span>:
-        <span class="keyword">return</span> self.isBalanced(root.left) <span class="keyword">and</span> self.isBalanced(root.right)
-    <span class="comment"># not balance return False</span>
-    <span class="keyword">else</span>:
-        <span class="keyword">return</span> <span class="keyword">False</span>
-</code></pre></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1086,7 +1066,7 @@ def helper(self, root, level, <span class="literal">result</span>):
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
