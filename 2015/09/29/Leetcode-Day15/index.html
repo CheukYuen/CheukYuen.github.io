@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="tree," />
+  <meta name="keywords" content="Hexo,next" />
 
 
 
@@ -37,19 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="从零开始Leetcode – Day 9##Binary Tree Zigzag Level Order Traversal
-这题和Binary Tree Level Order Traversal 很想。 要注意count是从第二层开始算。Binary Tree Zigzag Level Order Traversal广度优先的WIKIhttps://en.wikipedia.org/wiki/">
+<meta name="description" content="从零开始Leetcode – Day 15Count Complete Tree Nodeshttps://leetcode.com/problems/count-complete-tree-nodes/注意直接递归会超时， log(N)
+123456789101112131415161718192021222324252627282930313233var countNodes = functi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-Day9">
-<meta property="og:url" content="http://yoursite.com/2015/09/19/Leetcode-Day9/index.html">
+<meta property="og:title" content="Leetcode-Day15">
+<meta property="og:url" content="http://yoursite.com/2015/09/29/Leetcode-Day15/index.html">
 <meta property="og:site_name" content="Leon Lin's Blog">
-<meta property="og:description" content="从零开始Leetcode – Day 9##Binary Tree Zigzag Level Order Traversal
-这题和Binary Tree Level Order Traversal 很想。 要注意count是从第二层开始算。Binary Tree Zigzag Level Order Traversal广度优先的WIKIhttps://en.wikipedia.org/wiki/">
-<meta property="og:updated_time" content="2015-09-25T06:28:55.000Z">
+<meta property="og:description" content="从零开始Leetcode – Day 15Count Complete Tree Nodeshttps://leetcode.com/problems/count-complete-tree-nodes/注意直接递归会超时， log(N)
+123456789101112131415161718192021222324252627282930313233var countNodes = functi">
+<meta property="og:updated_time" content="2015-09-30T06:11:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-Day9">
-<meta name="twitter:description" content="从零开始Leetcode – Day 9##Binary Tree Zigzag Level Order Traversal
-这题和Binary Tree Level Order Traversal 很想。 要注意count是从第二层开始算。Binary Tree Zigzag Level Order Traversal广度优先的WIKIhttps://en.wikipedia.org/wiki/">
+<meta name="twitter:title" content="Leetcode-Day15">
+<meta name="twitter:description" content="从零开始Leetcode – Day 15Count Complete Tree Nodeshttps://leetcode.com/problems/count-complete-tree-nodes/注意直接递归会超时， log(N)
+123456789101112131415161718192021222324252627282930313233var countNodes = functi">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +59,7 @@
   };
 </script>
 
-  <title> leetcode-Day9 | Leon Lin's Blog </title>
+  <title> Leetcode-Day15 | Leon Lin's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -195,7 +195,7 @@
           
           
             
-              leetcode-Day9
+              Leetcode-Day15
             
           
         </h1>
@@ -204,8 +204,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-09-19T23:02:49-07:00" content="2015-09-19">
-            2015-09-19
+          <time itemprop="dateCreated" datetime="2015-09-29T23:09:57-07:00" content="2015-09-29">
+            2015-09-29
           </time>
         </span>
 
@@ -238,33 +238,24 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_9">从零开始Leetcode – Day 9</h1><p>##Binary Tree Zigzag Level Order Traversal</p>
-<p>这题和Binary Tree Level Order Traversal 很想。 要注意count是从第二层开始算。<br>Binary Tree Zigzag Level Order Traversal<br>广度优先的WIKI<br><a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" rel="external">https://en.wikipedia.org/wiki/Breadth-first_search</a><br>明早再练习这两题。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> zigzagLevelOrder = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> res = [];</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> queue = [];</span><br><span class="line">        queue.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> curNum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> lastNum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">        <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(queue.length)&#123;</span><br><span class="line">        </span><br><span class="line">            <span class="keyword">var</span> cur = queue.shift();</span><br><span class="line">            lastNum --;</span><br><span class="line">            <span class="keyword">list</span>.push(cur.val);</span><br><span class="line">            <span class="keyword">if</span>(cur.left !== <span class="keyword">null</span>)&#123; </span><br><span class="line">                queue.push(cur.left);</span><br><span class="line">                curNum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cur.right !== <span class="keyword">null</span>)&#123;</span><br><span class="line">                queue.push(cur.right);</span><br><span class="line">                curNum ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lastNum === <span class="number">0</span>)&#123;</span><br><span class="line">                lastNum = curNum;</span><br><span class="line">                curNum = <span class="number">0</span>;</span><br><span class="line">                count = count +<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(count%<span class="number">2</span> === <span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="keyword">list</span>.reverse();</span><br><span class="line">                &#125;</span><br><span class="line">                res.push(<span class="keyword">list</span>);</span><br><span class="line">                <span class="keyword">list</span> = [];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_15">从零开始Leetcode – Day 15</h1><h2 id="Count_Complete_Tree_Nodes">Count Complete Tree Nodes</h2><p><a href="https://leetcode.com/problems/count-complete-tree-nodes/" target="_blank" rel="external">https://leetcode.com/problems/count-complete-tree-nodes/</a><br>注意直接递归会超时， log(N)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> countNodes = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root ===<span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> l = leftDepth(root);</span><br><span class="line">    <span class="keyword">var</span> r = rightDepth(root);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(l =r)&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">Math</span>.pow(<span class="number">2</span>, l)-<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">1</span> + countNodes(root.left) + countNodes(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> leftDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(root !==<span class="literal">null</span>)&#123;</span><br><span class="line">        h++;</span><br><span class="line">        root = root.left</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rightDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(root !==<span class="literal">null</span>)&#123;</span><br><span class="line">        h++;</span><br><span class="line">        root = root.right;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/tree/" rel="tag">#tree</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/19/hello-world/" rel="prev">Hello World</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/18/Leetcode-Day8/" rel="next">leetcode-Day8</a>
+              <a href="/2015/09/24/Leetcode-Day14/" rel="next">Leetcode-Day14</a>
             
           </div>
         </div>
@@ -368,7 +359,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_9"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 9</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始Leetcode_–_Day_15"><span class="nav-number">1.</span> <span class="nav-text">从零开始Leetcode – Day 15</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Count_Complete_Tree_Nodes"><span class="nav-number">1.1.</span> <span class="nav-text">Count Complete Tree Nodes</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

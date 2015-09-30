@@ -193,6 +193,84 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/29/Leetcode-Day15/" itemprop="url">
+                Leetcode-Day15
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-29T23:09:57-07:00" content="2015-09-29">
+            2015-09-29
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_15">从零开始Leetcode – Day 15</h1><h2 id="Count_Complete_Tree_Nodes">Count Complete Tree Nodes</h2><p><a href="https://leetcode.com/problems/count-complete-tree-nodes/" target="_blank" rel="external">https://leetcode.com/problems/count-complete-tree-nodes/</a><br>注意直接递归会超时， log(N)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> countNodes = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root ===<span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> l = leftDepth(root);</span><br><span class="line">    <span class="keyword">var</span> r = rightDepth(root);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(l =r)&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">Math</span>.pow(<span class="number">2</span>, l)-<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">1</span> + countNodes(root.left) + countNodes(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> leftDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(root !==<span class="literal">null</span>)&#123;</span><br><span class="line">        h++;</span><br><span class="line">        root = root.left</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rightDepth = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(root !==<span class="literal">null</span>)&#123;</span><br><span class="line">        h++;</span><br><span class="line">        root = root.right;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/24/Leetcode-Day14/" itemprop="url">
                 Leetcode-Day14
               </a>
@@ -240,7 +318,7 @@
       
         
           <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_14">从零开始Leetcode – Day 14</h1><h2 id="Convert_Sorted_List_to_Binary_Search_Tree">Convert Sorted List to Binary Search Tree</h2><p><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/</a></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * function ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.next = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;ListNode&#125; head</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedListToBST = <span class="function"><span class="keyword">function</span><span class="params">(head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> cur = head;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cur !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(head);</span><br><span class="line">    <span class="keyword">return</span> helper(<span class="keyword">list</span>, <span class="number">0</span>, count-<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(list, l, r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> m = Math.round((l+r)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">var</span> left = <span class="keyword">new</span> TreeNode();</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * function ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.next = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;ListNode&#125; head</span><br><span class="line"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> sortedListToBST = <span class="function"><span class="keyword">function</span><span class="params">(head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> cur = head;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cur !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(head);</span><br><span class="line">    <span class="keyword">return</span> helper(<span class="keyword">list</span>, <span class="number">0</span>, count-<span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(list, l, r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> m = Math.floor((l+r)/<span class="number">2</span>);</span><br><span class="line">    <span class="comment">// left </span></span><br><span class="line">    <span class="keyword">var</span> left = helper(<span class="keyword">list</span>, l, m-<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(<span class="keyword">list</span>[<span class="number">0</span>].val);</span><br><span class="line">    root.left = left;</span><br><span class="line">    <span class="keyword">list</span>[<span class="number">0</span>] = <span class="keyword">list</span>[<span class="number">0</span>].next;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// right</span></span><br><span class="line">    root.right = helper(<span class="keyword">list</span>, m+<span class="number">1</span>, r);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
         
       
     </div>
@@ -876,85 +954,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/06/Leetcode-Day6/" itemprop="url">
-                leetcode-Day6
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-09-06T23:51:34-07:00" content="2015-09-06">
-            2015-09-06
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">从零开始Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>进入medium 的tree了， 这个有bug， 明天继续 </p>
-<h1 id="从零开始Leetcode_–_Day_6">从零开始Leetcode – Day 6</h1><h2 id="Path_Sum_II">Path Sum II</h2><p><a href="https://leetcode.com/problems/path-sum-ii/" target="_blank" rel="external">https://leetcode.com/problems/path-sum-ii/</a><br>要记得每次递归过后，要把上一次的pop()出来。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@param</span> &#123;number&#125; sum</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> pathSum = <span class="function"><span class="keyword">function</span><span class="params">(root, sum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">    <span class="keyword">list</span>.push(root.val);</span><br><span class="line">    helper(root, sum- root.val, <span class="keyword">list</span>, res);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span><span class="params">(root, sum, list, res)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left === <span class="keyword">null</span> &amp;&amp; root.right === <span class="keyword">null</span> &amp;&amp; sum === <span class="number">0</span>)&#123;</span><br><span class="line">        res.push(<span class="keyword">list</span>.slice());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">list</span>.push(root.left.val);</span><br><span class="line">        helper(root.left, sum - root.left.val, <span class="keyword">list</span>, res);</span><br><span class="line">        <span class="keyword">list</span>.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right !== <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">list</span>.push(root.right.val);</span><br><span class="line">        helper(root.right, sum - root.right.val, <span class="keyword">list</span>, res);</span><br><span class="line">        <span class="keyword">list</span>.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -993,7 +992,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">25</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
