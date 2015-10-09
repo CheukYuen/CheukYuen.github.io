@@ -193,6 +193,84 @@
           
           
             
+              <a class="post-title-link" href="/2015/10/08/Leetcode-Day16/" itemprop="url">
+                Leetcode-Day16
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-10-08T22:53:57-07:00" content="2015-10-08">
+            2015-10-08
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_16">从零开始Leetcode – Day 16</h1><h2 id="Flatten_Binary_Tree_to_Linked_List">Flatten Binary Tree to Linked List</h2><p><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="external">https://leetcode.com/problems/flatten-binary-tree-to-linked-list/</a></p>
+<p>1 注意考虑起始条件， 和终止条件。<br>2 晚上做不了算法题， 白天做过的，到了晚上不能debug.<br>3 所有题目要重做一次， 才会产生效果。</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * <span class="keyword">function</span> TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.<span class="built_in">left</span> = this.<span class="built_in">right</span> = <span class="literal">null</span>;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;TreeNode&#125; root</span><br><span class="line"> * @return &#123;void&#125; <span class="keyword">Do</span> <span class="keyword">not</span> return anything, modify root <span class="keyword">in</span>-place instead.</span><br><span class="line"> */</span><br><span class="line">var flatten = <span class="keyword">function</span>(root) &#123;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    var pre = [];</span><br><span class="line">    pre.push(<span class="literal">null</span>);</span><br><span class="line">    helper(root, pre);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var helper = <span class="keyword">function</span>(root, pre)&#123;</span><br><span class="line">    <span class="keyword">if</span>(root ===<span class="literal">null</span>)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    var <span class="built_in">right</span> = <span class="keyword">new</span> TreeNode();</span><br><span class="line">    <span class="built_in">right</span> = root.<span class="built_in">right</span>;</span><br><span class="line">    <span class="keyword">if</span>(pre[<span class="number">0</span>] !== <span class="literal">null</span>)&#123;</span><br><span class="line">        pre[<span class="number">0</span>].<span class="built_in">left</span> = <span class="literal">null</span>;</span><br><span class="line">        pre[<span class="number">0</span>].<span class="built_in">right</span> = root;</span><br><span class="line">    &#125;</span><br><span class="line">    pre.unshift(root);</span><br><span class="line">    helper(root.<span class="built_in">left</span>, pre);</span><br><span class="line">    helper(<span class="built_in">right</span>, pre);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/29/Leetcode-Day15/" itemprop="url">
                 Leetcode-Day15
               </a>
@@ -876,84 +954,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/17/Leetcode-Day7/" itemprop="url">
-                leetcode-Day7
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-09-17T22:35:58-07:00" content="2015-09-17">
-            2015-09-17
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">从零开始Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_7">从零开始Leetcode – Day 7</h1><h2 id="Sum_Root_to_Leaf_Numbers">Sum Root to Leaf Numbers</h2><p><a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="external">https://leetcode.com/problems/sum-root-to-leaf-numbers/</a></p>
-<p>把sum变成了array(object), 然后再pass by reference. primitive type 是pass by value.</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * <span class="function"><span class="keyword">function</span></span> TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;TreeNode&#125; root</span><br><span class="line"> * @<span class="keyword">return</span> &#123;<span class="keyword">number</span>&#125;</span><br><span class="line"> */</span><br><span class="line">var sumNumbers = <span class="function"><span class="keyword">function</span><span class="params">(root)</span></span> &#123;</span><br><span class="line">    var <span class="built_in">sum</span> = &#123;<span class="built_in">sum</span>:<span class="number">0</span>&#125;;</span><br><span class="line">    var path = <span class="number">0</span>;</span><br><span class="line">    helper(root, <span class="built_in">sum</span>, path);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>.<span class="built_in">sum</span>;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var helper = <span class="function"><span class="keyword">function</span><span class="params">(root, sum, path)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="comment">!root)&#123;</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    path = path * <span class="number">10</span> + root.val;</span><br><span class="line">    <span class="keyword">if</span>(<span class="comment">!root.left &amp;&amp; !root.right)&#123;</span></span><br><span class="line">        <span class="built_in">sum</span>.<span class="built_in">sum</span> += path;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left)&#123;</span><br><span class="line">       helper(root.left, <span class="built_in">sum</span>, path); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right)&#123;</span><br><span class="line">        helper(root.right, <span class="built_in">sum</span>, path);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -992,7 +992,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
