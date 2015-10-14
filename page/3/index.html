@@ -193,6 +193,78 @@
           
           
             
+              <a class="post-title-link" href="/2015/03/19/Path-Sum/" itemprop="url">
+                Path-Sum
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-03-19T23:29:36-07:00" content="2015-03-19">
+            2015-03-19
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>##Path Sum<br>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
+<p>class Solution:</p>
+<pre><code><span class="comment"># @param root, a tree node</span>
+<span class="comment"># @param sum, an integer</span>
+<span class="comment"># @return a boolean</span>
+<span class="function"><span class="keyword">def</span> <span class="title">hasPathSum</span><span class="params">(self, root, sum)</span>:</span>
+    <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:
+        <span class="keyword">return</span> <span class="keyword">False</span>
+    <span class="keyword">if</span> root.right <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">and</span> root.left <span class="keyword">is</span> <span class="keyword">None</span>:
+        <span class="keyword">return</span> root.val == sum
+    <span class="keyword">return</span> self.hasPathSum(root.left, sum - root.val) <span class="keyword">or</span> self.hasPathSum(root.right, sum - root.val)
+</code></pre></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/03/18/Minimum-Depth-of-Binary-Tree/" itemprop="url">
                 Minimum-Depth-of-Binary-Tree
               </a>
@@ -806,7 +878,7 @@ document.write(fib(<span class="number">10</span>));
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

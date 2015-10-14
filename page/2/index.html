@@ -193,6 +193,84 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/18/Leetcode-Day8/" itemprop="url">
+                leetcode-Day8
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-18T23:15:17-07:00" content="2015-09-18">
+            2015-09-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_8">从零开始Leetcode – Day 8</h1><h2 id="Sum_Root_to_Leaf_Numbers">Sum Root to Leaf Numbers</h2><p><a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="external">https://leetcode.com/problems/sum-root-to-leaf-numbers/</a><br>用private function 做， 这样子sum就在function里了。 leetcode OJ 不能全局变量。</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var sumNumbers = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> &#123;</span></span><br><span class="line">    var <span class="built_in">sum</span> = <span class="number">0</span>;</span><br><span class="line">    var path = <span class="number">0</span>;</span><br><span class="line">    helper(root, path);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">helper</span><span class="params">(root, path)</span>&#123;</span></span><br><span class="line">      <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      path = path * <span class="number">10</span> + <span class="transposed_variable">root.</span>val;</span><br><span class="line">      <span class="keyword">if</span>(!<span class="transposed_variable">root.</span>left &amp;&amp; !<span class="transposed_variable">root.</span>right)&#123;</span><br><span class="line">          <span class="built_in">sum</span> += path;</span><br><span class="line">          <span class="keyword">return</span> <span class="built_in">sum</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="transposed_variable">root.</span>left)&#123;</span><br><span class="line">         helper(<span class="transposed_variable">root.</span>left, path); </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="transposed_variable">root.</span>right)&#123;</span><br><span class="line">          helper(<span class="transposed_variable">root.</span>right, path);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/17/Leetcode-Day7/" itemprop="url">
                 leetcode-Day7
               </a>
@@ -940,78 +1018,6 @@ def helper(self, root, level, <span class="literal">result</span>):
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/19/Path-Sum/" itemprop="url">
-                Path-Sum
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-03-19T23:29:36-07:00" content="2015-03-19">
-            2015-03-19
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>##Path Sum<br>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
-<p>class Solution:</p>
-<pre><code><span class="comment"># @param root, a tree node</span>
-<span class="comment"># @param sum, an integer</span>
-<span class="comment"># @return a boolean</span>
-<span class="function"><span class="keyword">def</span> <span class="title">hasPathSum</span><span class="params">(self, root, sum)</span>:</span>
-    <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:
-        <span class="keyword">return</span> <span class="keyword">False</span>
-    <span class="keyword">if</span> root.right <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">and</span> root.left <span class="keyword">is</span> <span class="keyword">None</span>:
-        <span class="keyword">return</span> root.val == sum
-    <span class="keyword">return</span> self.hasPathSum(root.left, sum - root.val) <span class="keyword">or</span> self.hasPathSum(root.right, sum - root.val)
-</code></pre></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1050,7 +1056,7 @@ def helper(self, root, level, <span class="literal">result</span>):
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
