@@ -193,6 +193,85 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/19/Leetcode-Day9/" itemprop="url">
+                leetcode-Day9
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-09-19T23:02:49-07:00" content="2015-09-19">
+            2015-09-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/从零开始Leetcode/" itemprop="url" rel="index">
+                  <span itemprop="name">从零开始Leetcode</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="从零开始Leetcode_–_Day_9">从零开始Leetcode – Day 9</h1><p>##Binary Tree Zigzag Level Order Traversal</p>
+<p>这题和Binary Tree Level Order Traversal 很想。 要注意count是从第二层开始算。<br>Binary Tree Zigzag Level Order Traversal<br>广度优先的WIKI<br><a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" rel="external">https://en.wikipedia.org/wiki/Breadth-first_search</a><br>明早再练习这两题。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * <span class="doctag">@param</span> &#123;TreeNode&#125; root</span><br><span class="line"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> zigzagLevelOrder = <span class="function"><span class="keyword">function</span><span class="params">(root)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> res = [];</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> queue = [];</span><br><span class="line">        queue.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> curNum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> lastNum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> <span class="keyword">list</span> = [];</span><br><span class="line">        <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(queue.length)&#123;</span><br><span class="line">        </span><br><span class="line">            <span class="keyword">var</span> cur = queue.shift();</span><br><span class="line">            lastNum --;</span><br><span class="line">            <span class="keyword">list</span>.push(cur.val);</span><br><span class="line">            <span class="keyword">if</span>(cur.left !== <span class="keyword">null</span>)&#123; </span><br><span class="line">                queue.push(cur.left);</span><br><span class="line">                curNum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cur.right !== <span class="keyword">null</span>)&#123;</span><br><span class="line">                queue.push(cur.right);</span><br><span class="line">                curNum ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lastNum === <span class="number">0</span>)&#123;</span><br><span class="line">                lastNum = curNum;</span><br><span class="line">                curNum = <span class="number">0</span>;</span><br><span class="line">                count = count +<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(count%<span class="number">2</span> === <span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="keyword">list</span>.reverse();</span><br><span class="line">                &#125;</span><br><span class="line">                res.push(<span class="keyword">list</span>);</span><br><span class="line">                <span class="keyword">list</span> = [];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/18/Leetcode-Day8/" itemprop="url">
                 leetcode-Day8
               </a>
@@ -918,106 +997,6 @@ def helper(self, root, level, <span class="literal">result</span>):
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/23/Binary-Tree-Level-Order-Traversal/" itemprop="url">
-                Binary-Tree-Level-Order-Traversal
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-03-23T21:37:20-07:00" content="2015-03-23">
-            2015-03-23
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                  <span itemprop="name">Leetcode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>##Binary Tree Level Order Traversal </p>
-<p>leetcode:  <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">https://leetcode.com/problems/binary-tree-level-order-traversal/</a></p>
-<p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).</p>
-<p>class Solution:</p>
-<pre><code><span class="comment"># @param root, a tree node</span>
-<span class="comment"># @return a list of lists of integers</span>
-def levelOrder(self, root):
-    <span class="comment">#list to save integers</span>
-    <span class="keyword">if</span> <span class="keyword">not</span> root:
-        <span class="keyword">return</span> []
-    <span class="literal">result</span> = []
-    <span class="comment"># a recu </span>
-    self.helper(root, <span class="number">0</span>, <span class="literal">result</span>)
-    <span class="keyword">return</span> <span class="literal">result</span>
-
-def helper(self, root, level, <span class="literal">result</span>):
-    <span class="comment">#</span>
-    <span class="keyword">if</span> <span class="keyword">not</span> root:
-        <span class="keyword">return</span>
-    <span class="keyword">if</span> level+<span class="number">1</span> &gt; len(<span class="literal">result</span>):
-            <span class="literal">result</span>.append([])
-    <span class="literal">result</span>[level].append(root.val)
-    self.helper(root.left, level+<span class="number">1</span>, <span class="literal">result</span>)
-    self.helper(root.right, level+<span class="number">1</span>, <span class="literal">result</span>)
-</code></pre></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1056,7 +1035,7 @@ def helper(self, root, level, <span class="literal">result</span>):
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
